@@ -1,0 +1,168 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+h4 {
+    margin: 20px auto;
+    text-align: center;
+}
+button {
+    cursor: pointer;
+}
+input {
+    outline: none;
+    padding: 3px;
+    box-sizing: border-box;
+}
+.bai1 {
+    text-align: center;
+    width: 900px;
+    margin: 20px auto;
+}
+
+.bai1 h3 {
+    margin-bottom: 10px;
+}
+.bai1 h3 span {
+    color: rgb(0 174 239);
+}
+.bai1 p {
+    padding: 3px 0;
+}
+.list-button {
+    margin-top: 20px;
+}
+.bai1 button {
+    background-color: #333;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    border-radius: 3px;
+    color: #fff;
+    margin: 0 5px;
+    transition: all .2s linear;
+}
+.bai1 button:hover {
+    background-color: white;
+    color: #333;
+}
+
+/*  css bài 2 */
+
+.bai2 {
+    width: 500px;
+    height: 200px;
+    background-image: url('https://anhdepfree.com/wp-content/uploads/2020/09/hinh-background-thien-nhien-don-gian.jpg');
+    background-size: cover;
+    margin: 10px auto;
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.bai2 p:first-child {
+    margin-bottom: 10px;
+}
+.bai2 p:nth-child(2){
+   margin-bottom: 20px;
+}
+.bai2 button {
+    background-color: rgb(216 63 46);
+    padding: 10px 20px;
+    color: white;
+    border-radius: 4px;
+    transition: all .2s linear;
+    border: none;
+}
+.bai2 button:hover {
+    color: rgb(216 63 46);
+    background-color: white;
+}
+
+
+
+/* css bài 3 */
+
+.bai3 {
+    width: 900px;
+    margin: 10px auto;
+}
+.bai3 h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+.bai3 img {
+    width: 400px;
+    margin: 0 auto 20px auto;
+    display: block;
+}
+.bai3 p span {
+    color: #ff0056;
+}
+
+
+
+
+/* css bài 4 */
+.bai4 form {
+    box-shadow: 0 0 5px #777;
+    width: 400px;
+    margin: 15px auto;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+.bai4 h2 {
+    text-align: center;
+}
+.bai4 label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    color: #444;
+}
+.bai4 input {
+    width: 100%;
+    height: 30px;
+}
+.bai4 textarea {
+    width: 100%;
+}
+.bai4 button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 3px;
+}
+
+/* css bài 5 */
+
+.bai5 h2 {
+    text-align: center;
+    margin: 10px 0;
+}
+.bai5 form {
+    width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: rgb(250 237 214);
+    margin: 0 auto;
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+.bai5 label {
+    display: block;
+    margin-top: 10px;
+    color: #444;
+}
+.bai5 input {
+    width: 100%;
+    height: 25px;
+}
+.bai5 button {
+    margin-top: 10px;
+    background-color: #0087bd;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
