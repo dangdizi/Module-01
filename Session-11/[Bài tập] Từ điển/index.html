@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Từ Điển</title>
+</head>
+<body>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;;
+            top: 100px;
+            gap: 40px;
+        }
+        label {
+            display: block;
+            margin-bottom: 2px;
+        }
+        button {
+            border: 0;
+            background-color: #1990f4;
+            color: #fff;
+            height: 30px;
+            padding: 0 15px;
+            font-size: 1.1em;
+            margin-top: calc(1em + 4px);
+            border: 1px solid #1990f4;
+            cursor: pointer;
+        }
+        input {
+            height: 30px;
+            border: 1px solid #bdbdbd;
+            outline: none;
+            padding: 0 5px;
+        }
+    </style>
+    <div class="container">
+        <div class="translate">
+            <label for="character">Nhập tìm kiếm</label>
+            <input type="text" id="character">
+        </div>
+        <button onclick="translates()">Dịch</button>
+        <div class="result">
+            <label for="result">Kết Quả</label>
+            <input type="text" id="result">
+        </div>
+    </div>
+
+    <script>
+        function translates () {
+            let character = document.getElementById ('character');
+            let result = document.getElementById ('result');
+
+            const listCharacter = ['hello', 'duck', 'pig'];
+            const listTranslate = ['xin chào', 'con vịt', 'con lợn'];
+            for (let i = 0; i <= listCharacter.length; i++) {
+                if (i >= listCharacter.length) {
+                    alert ('chưa có trong từ điển');
+                }
+                if (character.value == listCharacter[i]) {
+                    result.value = listTranslate[i];
+                    break;
+                }
+                
+            }
+        }
+    </script>
+</body>
+</html>

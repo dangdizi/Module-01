@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 2</title>
+</head>
+<body>
+    <script>
+        let intInput = +prompt ('nhập số bất kỳ');
+        const array = [1,2,3,4,5];
+        const result = [];
+
+        for (let i = 0; i < array.length; i++) {
+            const data = array[i];
+            if (data % 2 === 0 && array[i-1] % 2 ===0) {
+                result.push (`-${data}`);
+            } else {
+                result.push (data);
+            }
+            
+        }
+        console.log(result.join (''));
+    </script>
+</body>
+</html>

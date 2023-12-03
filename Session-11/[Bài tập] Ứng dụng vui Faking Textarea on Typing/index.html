@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập troll</title>
+</head>
+<body onload="slideText ()">
+    <div class="container">
+        <div class="form">
+            <h2>Type anthing slowly</h2>
+            <textarea name="" id="text" cols="30" rows="10"></textarea>
+        </div>
+    </div>
+    <script>
+        let exText = "Chúc mừng! bạn đã bị troll.";
+        let arrText = exText.split ('');
+        let str = '';
+        function slideText () {
+            let text = document.getElementById ('text').value;
+            for (let i = 1; i <= text.length; i++) {
+                str = str + arrText[i - 1];
+                if (i > exText.length) {
+                    str = '';
+                }
+            }
+            document.getElementById ('text').value = str;
+            str = '';
+            setTimeout (slideText, 1);
+        }
+    </script>
+</body>
+</html>

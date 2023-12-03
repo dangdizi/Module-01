@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 2</title>
+  </head>
+  <body>
+    <script>
+      // const arrInt = [[],[],[]];
+      // let value1 = prompt ('nhập 3 phần tử hàng 1, phân cách bằng khoảng trống (space)').split (' ');
+      // let value2 = prompt ('nhập 3 phần tử hàng 2, phân cách bằng khoảng trống (space)').split (' ');
+      // let value3 = prompt ('nhập 3 phần tử hàng 3, phân cách bằng khoảng trống (space)').split (' ');
+      // for (let i = 0; i < value1.length; i++) {
+      //     arrInt[0].push (+value1[i]);
+      // }
+      // for (let i = 0; i < value2.length; i++) {
+      //     arrInt[1].push (+value2[i]);
+      // }
+      // for (let i = 0; i < value3.length; i++) {
+      //     arrInt[2].push (+value3[i]);
+      // }
+      const arrInt = [
+        [1, 2, 3],
+        [6, 5, 4],
+        [7, 8, 9],
+      ];
+      for (let i = 0; i < arrInt.length; i++) {
+        for (let j = 0; j < arrInt[i].length; j++) {
+          console.log(arrInt[i][j]);
+        }
+      }
+      console.log("ma trận");
+      for (let i = 0; i < arrInt.length; i++) {
+        console.log(arrInt[i].join(" "));
+      }
+
+      // phần tử đường biên
+      console.log("các phần tử đường biên của ma trận");
+      for (let i = 0; i < arrInt.length; i++) {
+        if (i == 0 || i == arrInt.length - 1) {
+          console.log(arrInt[i].join(" "));
+        } else {
+          console.log(arrInt[i][0], arrInt[i][arrInt[i].length - 1]);
+        }
+      }
+
+      // đường chéo chính -> array[row][row]
+      // đương chéo phụ -> array[row][total Col - row]
+      const mainCross = [];
+      const extraCross = [];
+      for (let i = 0; i < arrInt.length; i++) {
+        mainCross.push(arrInt[i][i]);
+        extraCross.push(arrInt[i][arrInt.length - i - 1]);
+      }
+      console.log(`tập hợp đường chéo chính: ${mainCross.join(", ")}`);
+      console.log(`tập hợp đường chéo phụ: ${extraCross.join(", ")}`);
+
+      // mảng tăng dần theo dòng - dùng sort
+      const asc = [];
+      for (let i = 0; i < arrInt.length; i++) {
+        asc.push(
+          arrInt[i].sort(function (after, before) {
+            return after - before;
+          })
+        );
+      }
+
+      console.log("tăng dần sử dụng sort", asc);
+
+      // mảng tăng dần dùng for
+      const asc2 = [];
+      for (let i = 0; i < arrInt.length; i++) {
+        asc2.push(arrangeAsc(arrInt[i]));
+      }
+
+      function arrangeAsc(array) {
+        const cache = [];
+        for (let i = 0; i < array.length; i++) {
+          cache[array[i]] = array[i];
+        }
+        return cache.filter(() => {
+          return true;
+        });
+      }
+
+      console.log(`tăng dần không dùng sort`, asc2);
+    </script>
+  </body>
+</html>

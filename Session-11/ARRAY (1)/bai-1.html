@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+<body>
+    
+    <script>
+        let input1 = +prompt ('nhập số nguyên 1');
+        let input2 = +prompt ('nhập số nguyên 2');
+        let input3 = +prompt ('nhập số nguyên 3');
+        let input4 = +prompt ('nhập số nguyên 4');
+        let input5 = +prompt ('nhập số nguyên 5');
+
+        const intArray = [input1, input2, input3, input4, input5];
+
+        console.log(intArray);
+
+
+        // in ra số chẵn và tính tổng
+        const evenNumber = [];
+        let evenTotal = 0;
+        for (let i = 0; i < intArray.length; i++) {
+            if (intArray[i] % 2 === 0) {
+                evenNumber.push (intArray[i]);
+                evenTotal = evenTotal + intArray[i];
+            }
+        }
+        console.log(`tập hợp số chẵn là ${evenNumber.join (' + ')} = ${evenTotal}`);
+
+        // in ra số lẽ và tính tổng
+        const oddNumber = [];
+        let oddTotal = 0;
+        for (let i = 0; i < intArray.length; i++) {
+            if (intArray[i] % 2 !== 0) {
+                oddNumber.push (intArray[i]);
+                oddTotal = oddTotal + intArray[i];
+            }
+        }
+        console.log(`tập hợp số lẽ là ${oddNumber.join (' + ')} = ${oddTotal}`);
+
+
+        // in ra số nguyên tố
+        const listPrime = [];
+        let prime = true;
+        for (let i = 0; i < intArray.length; i++) {
+            if (intArray[i] < 2) {
+                prime = false;
+            }
+            for (let j = 2; j < intArray[i]; j++) {
+                if (intArray[i] % j === 0) {
+                    prime = false;
+                    break;
+                } else {
+                    prime = true;
+                }
+            }
+
+            if (prime === true) {
+                listPrime.push (intArray[i]);
+            }
+        }
+        console.log(`số nguyên tố là ${listPrime.join (', ')}`);
+
+
+
+
+        // tìm max min 
+        let min = intArray[0],
+            max = intArray[0];
+        for (let i = 0; i < intArray.length; i++) {
+            if (intArray[i] < min) {
+                min = intArray[i];
+            }
+            if (intArray[i] > max) {
+                max = intArray[i];
+            }
+        }
+
+        console.log(`min = ${min} và max = ${max}`);
+
+
+        // mảng tăng dần và giảm dần
+        // dùng sort - tăng dần
+        intArray.sort (function (a,b) {
+            return a - b;
+        });
+        console.log ('sort tăng giần',intArray);
+
+        intArray.sort (function (a,b) {
+            return b - a;
+        });
+        console.log ('sort giảm giần',intArray);
+
+
+        // dùng for
+        const saved = [];
+        const esc = [],
+            desc = [];
+        for (let i = 0; i < intArray.length; i++) {
+            if (saved[intArray[i]] === undefined) {
+                saved[intArray[i]] = intArray[i];
+            } else {
+                saved.splice (intArray[i], 0, intArray[i]);
+            }
+        }
+        for (let i = 0; i < saved.length; i++) {
+            if (saved[i] !== undefined) {
+                esc.push (saved[i]);
+            }
+        }
+        console.log(esc);
+        for (let i = saved.length; i >= 0; i--) {
+            if (saved[i] !== undefined) {
+                desc.push (saved[i]);
+            }
+        }
+        console.log(desc);
+
+        // nhập số nguyên tìm kiếm trùng lặp
+
+        let intInput = +prompt ('Nhập số nguyên trùng lặp');
+        let count = 0;
+        for (let i = 0; i < intArray.length; i++) {
+            if (intArray[i] == intInput) {
+                count = ++count;
+            }
+            
+        }
+        console.log(`'${intInput}' có ${count} phần tử khác!`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 3</title>
+</head>
+<body>
+    <script>
+        let string = prompt ('Nhập chuỗi cần thay đổi');
+        const result = [];
+        for (let i = 0; i < string.length; i++) {
+            let value = string[i];
+            value === value.toUpperCase () ? result.push (value.toLowerCase ()) : result.push (value.toUpperCase ());
+        }
+        console.log(result);
+    </script>
+</body>
+</html>
