@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập function</title>
+</head>
+<body>
+    <script>
+
+        // bài tập 1
+        function welcome () {
+            console.log('Xin chào Rikkei Academy');
+        }
+
+        // bài tập 2
+        function square (number) {
+            return number * number;
+        }
+
+        // bài tập 3
+        function calcCentury (year) {
+            let century = (year - year % 100) / 100;
+
+            if (year % 100 === 0 && century > 0) {
+                return century;
+            } else {
+                return century + 1;
+            }
+        }
+        
+
+        // bài 4
+
+        function shortenString (string) {
+            let result = '';
+
+            for (let i = 0; i < 11; i++) {
+                result += string[i];
+            }
+
+            return result + "...";
+        }
+
+
+        // bài 5
+        function stand (string) {
+            let result = '';
+            let stringSplit = string.split (' ');
+            for (let i = 0; i < stringSplit.length; i++) {
+                let character = stringSplit[i];
+                for (let j = 0; j < character.length; j++) {
+                    if (j === 0) {
+                        result += character[j].toUpperCase ();
+                    } else {
+                        result += character[j].toLowerCase ();
+                    }
+                }
+                stringSplit.length > 1 ? result += " " : '';
+                
+            }
+            return result;
+        }
+
+        
+        // bài 6
+        function findMax (array) {
+            let items = 0;
+
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] > items) {
+                    items = array[i];
+                }
+            }
+
+            return items;
+        }
+
+        
+        // bài 7
+        function checkInt (int) {
+            let prime = 0,
+                perfect = 0;
+            int % 2 === 0 ? console.log(`${int} là số chẵn`) : console.log(`${int} là số lẽ`);
+
+            for (let i = 0; i < int; i++) {
+                if (int % i === 0) {
+                    ++prime;
+                    perfect += i;
+                }
+            }
+            
+            prime === 1 ? console.log(`${int} là số nguyên tố`) : console.log(`${int} không phải là số nguyên tố`);
+
+            perfect == int ? console.log(`${int} là số hoàn hảo`) : console.log(`${int} không phải là số hoàn hảo`);;
+        }
+        
+        
+        // bài 8
+        function average (array) {
+            return eval (array.join ('+')) / array.length;
+        }
+
+      
+        // bài 9
+        function getPrime (n) {
+            const prime = [];
+            let i = 3;
+
+            while (prime.length <= n) {
+                let check = 0;
+
+                for (let j = 2; j < i; j++) { // tìm ước của số 3 + vô cực i + 1
+                    if (i % 2 === 0) {
+                        ++check;
+                        break;
+                    }
+                }
+
+                if (check === 0) { // nếu không có ước thì sẽ là số nguyên tố
+                    prime.push (i);
+                    if (prime.length === n) { // nếu đủ số length = n thì return dừng func
+                        console.log (`${n} số nguyên tố tăng dần:`,prime.join (', '));
+                        return;
+                    }
+                }
+
+                ++i;
+            }
+        }
+    </script>
+</body>
+</html>
