@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        list-style: none;
+        font-family: 'Arial';
+    }
+    .container {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+    .clock {
+        width: 450px;
+        height: 70px;
+        border: 1px solid #dede;
+        background-color: #333;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .clock span {
+        padding: 0 40px;
+    }
+    .clock span:first-child {
+        border-right: 2px solid #fff;
+    }
+</style>
+<body onload="timeCount ()">
+
+    <div class="container">
+        <div class="clock">
+            <span id="dmy"></span>
+            <span id="time"></span>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        // bài tập 1
+        function formatDate (dateTime) {
+            let date = new Date (dateTime);
+
+            let day = date.getDate ();
+            day < 10 ? day = '0' + day : '';
+
+            let month = date.getMonth () + 1;
+            month < 10 ? month = '0' + month : '';
+
+            let year = date.getFullYear ();
+            return `${day}/${month}/${year}`;
+        }
+
+        // bài tập 2
+        function checkEmail (array) {
+            for (let i = 0; i < array.length; i++) {
+                if (/@gmail.com/.test (array[i]) === false) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+
+        // bài tập 3
+        function timeCount () {
+            let time = new Date ();
+            let DMY = formatDate (time);
+            let hour = time.getHours ();
+
+            let minute = time.getMinutes ();
+            minute < 10 ? minute = '0' + minute : '';
+            
+            let seconds = time.getSeconds ();
+            seconds < 10 ? seconds = '0' + seconds : '';
+
+            let compile = `${hour}:${minute}:${seconds}`;
+            document.getElementById ('dmy').innerHTML = DMY;
+            document.getElementById ('time').innerHTML = compile;
+            setInterval (timeCount, 1);
+        }
+
+        // bài tập 4
+        function checkPassword (password) {
+            if (password.length < 8) {
+                console.log('Mật khẩu không được ngắn hơn 8 ký tự');
+            } else {
+                console.log('Đăng ký tài khoản thành công!');
+            }
+        }
+
+        // bài tập 5
+        function convert (character, string) {
+            return string.replaceAll (character, character.toUpperCase ());
+        }
+
+
+        // bài tập 6
+        function convertTemperature (from, value, to) {
+            let result = '';
+            if (from === 'C' && to === 'F') {
+                result = value * (9/5) + 32; 
+            } else if (from === 'F' && to === 'C') {
+                result = (value - 32) / (9/5);
+            } else {
+                result = value;
+            }
+
+            return result + ' ° ' + to;
+        }
+
+
+
+        // bài tập 7
+        function count (find, string) {
+            return string.split (find).length - 1;
+        }
+
+
+        
+        // bài tập 8
+        function maxArray (array) {
+            // return Math.max (...array);
+            let result = array[0];
+            for (let i = 0; i < array.length; i++) {
+                array[i] > result ? result = array[i] : '';
+            }
+
+            return result;
+        }
+
+
+
+        // bài tập 9
+        function reverseInt (int) {
+            let intToString = int.toString ();
+            // return Number (intToString.split ('').reverse ().join (''));
+            let result = '';
+            for (let i = intToString.length - 1; i >= 0; i--) {
+                result += intToString[i];
+            }
+
+            return Number (result);
+        }
+       
+
+
+        // bài tập 10
+        function findIndex (find, array) {
+            // return array.indexOf (find);
+
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === find) {
+                    return i;
+                }
+            }
+
+            return -1;
+        }
+
+        function filter (find, array) {
+            // let findIndex = array.indexOf (find);
+            // if (findIndex > -1) {
+            //     array.splice (findIndex, 1);
+            // }
+            // return array;
+
+            const cache = [];
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] != find) {
+                    cache.push (array[i]);
+                }
+            }
+            
+            
+            return cache;
+
+        }
+
+        console.log(filter (1, [1,2,3,4,5]));
+    </script>
+</body>
+</html>
