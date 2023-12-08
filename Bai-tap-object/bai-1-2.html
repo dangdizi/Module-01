@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 1 - 2</title>
+</head>
+<body>
+    <script src="./js/module.js"></script>
+    <script>
+        // const products = [
+        //     {productId: 1,
+        //      productName: 'sản phẩm 1',
+        //      price: 10000,
+        //      image: '',
+        //      description: '',
+        //      createdAt: '12/12/2023'},
+        //     {productId: 2,
+        //      productName: 'sản phẩm 2',
+        //      price: 20000,
+        //      image: '',
+        //      description: '',
+        //      createdAt: '12/12/2023'},
+        // ];
+        const products = [];
+        while (1) {
+            const productData = createProduct (new Product ());
+            
+            if (productData === null) {
+                break;
+            }
+            
+            products.push (product);
+            let end = confirm (`Đã thêm ${product.productName} vào danh sách, bạn muốn dừng lại không?`);
+
+            if (end === true) {
+                break;
+            }
+        }
+
+        // bài 2 a
+        console.log('------ hiển thị danh sách sản phẩm -------- ');
+        for (let i = 0; i < products.length; i++) {
+            for (key in products[i]) {
+                console.log(`${key} => ${products[i][key]}`);
+            }
+        }
+
+
+        // bài 2 b
+        const product2 = createProduct (new Product ()); 
+        if (product2 != null) {
+            alert ('id không được phép trùng');
+        } else {
+            products.push (product2);
+        }
+
+
+        // bài 2 c - tìm kiếm sản phẩm theo tên
+        console.log('------------- tìm kiếm ------------');
+        let searchKey = prompt ('Nhập tên sản phẩm cần tìm');
+        const searchResult = search (products, 'productName', searchKey);
+
+
+        if (searchResult.length == 0) {
+            console.log('không có kết quả trùng khớp');
+        } else {
+            console.log(`có ${searchResult.length} sản phẩm trùng khớp`);
+            for (let i = 0; i < searchResult.length; i++) {
+                for (key in searchResult[i]) {
+                    console.log(`${key} => ${searchResult[i][key]}`);
+                }
+                
+            }
+        }
+ 
+
+        // bài tập 2 d - sắp xếp giá tăng dần
+        console.log('-------------- sắp xếp tăng dần theo giá ------------');
+        products.sort ((a, b) => {
+            return a.price - b.price;
+        });
+
+        console.log(products);
+
+
+        // bài tập 2 e - tìm sản phẩm > 100.000 đ
+        console.log('------------- sản phẩm lớn hơn 100.000đ');
+        const result = priceFilter (products, 'price', 100000);
+        if (result.length === 0) {
+            console.log('khong có sản phẩm nào');
+        } else {
+            console.log(`có ${result.length} sản phẩm > 100.000 Đ`);
+            for (let i = 0; i < result.length; i++) {
+                for (key in result[i]) {
+                    console.log(`${key} => ${result[i][key]}`);
+                }
+                console.log('---------');
+            }
+        }
+
+
+
+        function Product () {
+            this.productId = null;
+            this.productName = null;
+            this.price = null;
+            this.image = null;
+            this.description = null;
+            this.createdAt = null;
+        }
+
+
+        
+        </script>
+</body>
+</html>

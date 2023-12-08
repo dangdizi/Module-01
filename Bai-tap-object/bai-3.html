@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 3</title>
+</head>
+<body>
+    <script src="./js/module.js"></script>
+    <script>
+        const users = [];
+
+
+        // bài 3 a 
+        
+
+        while (1) {
+            const userItem = createUser (new User ());
+            if (userItem === null) {
+                alert ('đã dừng nhập dữ liệu');
+                break;
+            } else {
+                console.log(userItem);
+                users.push (userItem);
+            }
+            let end = confirm ('đã nhập xong dữ liệu, có muốn thoát không!');
+
+            if (end === true) {
+                break;
+            }
+        }
+        
+        // bài 3 b
+        console.log(users);
+
+
+        // bài 3 c
+        let searchKey = prompt ('Nhập tìm kiếm email, hoặc username');
+
+        const searchResult = searchUser (users, searchKey);
+
+        console.log(`có ${searchResult.length} kết quả tìm kiếm`);
+        console.log(searchResult);
+
+
+        // bài tập 3 d
+        let username = prompt ('Nhập email hoặc username:');
+        let password = prompt ('Nhập password:');
+
+        let signin = signIn (users, username, password);
+
+        if (!signin) {
+            alert ('Đăng nhập thất bại');
+        } else {
+            alert ('Đăng nhập thành công');
+        }
+        // ------------- obj function -------------
+
+        function User () {
+            this.userId = null;
+            this.userName = null;
+            this.gender = null;
+            this.email = null;
+            this.password = null;
+            this.createdAt = null;
+        }
+
+        
+    </script>
+</body>
+</html>
