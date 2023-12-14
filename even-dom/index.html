@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập tổng hợp</title>
+    <link rel="stylesheet" href="./css.css">
+</head>
+<body>
+    <div class="container">
+        <button id="open-form">Thêm mới tài khoản</button>
+        <form class="form-input">
+            <div class="form-content">
+                <label for="username">Họ và tên</label>
+                <input type="text" id="username" placeholder="Nhập họ và tên">
+                
+                <label for="date-of-birth">Ngày sinh</label>
+                <input id="date-of-birth" type="date">
+                
+                <label for="email">Email</label>
+                <input id="email" type="text">
+                
+                <label for="password">Mật khẩu</label>
+                <input id="password" type="password">
+                
+                <label for="phone-number">Số điện thoại</label>
+                <input id="phone-number" type="text">
+                
+                <label for="address">Địa chỉ</label>
+                <input id="address" type="text">
+                
+                <div>
+                    <button type="button" id="close-form">Đóng</button>
+                    <button type="reset">Làm mới</button>
+                    <button type="submit" id="upload">Tải lên</button>
+                </div>
+            </div>
+        </form>
+
+        <form class="form-edit" id="0">
+            <div class="form-content">
+                <h3>Chỉnh sửa thông tin</h3>
+                <div>
+                    <label for="username-edit">Họ và tên</label>
+                    <input type="text" id="username-edit">
+                </div>
+                <div>
+                    <label for="date-of-birth-edit">Ngày sinh</label>
+                    <input type="date" id="date-of-birth-edit">
+                </div>
+                <div>
+                    <label for="email-edit">Email</label>
+                    <input type="text" id="email-edit">
+                </div>
+                <div>
+                    <label for="phone-number-edit">Số điện thoại</label>
+                    <input type="text" id="phone-number-edit">
+                </div>
+                <div>
+                    <label for="address-edit">Địa chỉ</label>
+                    <input type="text" id="address-edit">
+                </div>
+                <div>
+                    <label for="password-edit">Mật khẩu</label>
+                    <input type="text" id="password-edit">
+                </div>
+                <div>
+                    <button class="close-edit-form" type="button">Đóng</button>
+                    <button class="update" type="submit">Lưu Lại</button>
+                </div>
+            </div>
+        </form>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Họ và tên</th>
+                    <th>Ngày sinh</th>
+                    <th>Email</th>
+                    <th>Số điện thoại</th>
+                    <th>Địa chỉ</th>
+                    <th colspan="2">Chức năng</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="./form.js"></script>
+</body>
+</html>

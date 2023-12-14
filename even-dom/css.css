@@ -1,0 +1,142 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 20px;
+}
+
+.form-input, .form-edit {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+}
+
+.form-edit label, .form-edit input {
+    margin: 0!important;
+}
+
+
+.form-edit .form-content div {
+    margin: 10px 0;
+    text-align: center;
+    display: flex;
+}
+
+.form-content {
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    flex-direction: column;
+    position: relative;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px 30px;
+
+}
+
+.form-content label {
+    display: block;
+    font-weight: 700;
+    width: 100%;
+}
+
+.form-content input {
+    height: 35px;
+    outline: none;
+    display: block;
+    margin: 5px 0 20px 0;
+    padding: 0 6px;
+    width: 100%;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.form-content div {
+    text-align: center;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-content button {
+    width: 120px;
+    height: 35px;
+    background-color: #1990f4;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-content h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #333;
+
+}
+
+#lose-form {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+
+.table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid #333;
+}
+
+
+
+
+
+/* n */
+
+#open-form {
+    width: 200px;
+    height: 40px;
+    background-color: #1990f4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin: 0 auto;
+    cursor: pointer;
+
+}
+
+#tbody {
+    text-align: center;
+}
+
+#tbody button {
+    display: block;
+    margin: 5px auto;
+    background-color: #45a945;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+.delete {
+    background-color: #ff0056!important;
+}
