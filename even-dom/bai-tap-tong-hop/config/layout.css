@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+.container {
+    background-image: url('../img/background.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+.index-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    height: 100vh;
+}
+
+.index-layout img {
+    width: 50%;
+}
+
+.form {
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    width: 400px;
+}
+
+.form > div {
+    margin: 20px 0;
+}
+
+.form h2 {
+    text-align: center;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 3px;
+    font-weight: 600;
+}
+
+.form input {
+    width: 100%;
+    height: 32px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    outline: none;
+    padding: 0 5px;
+}
+
+.list-radio div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.list-radio input {
+    width: 15px;
+    margin: 0;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0!important;
+}
+
+.checkbox input {
+    width: 15px;
+}
+
+.form button {
+    width: 100%;
+    height: 35px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    background-color: #1990f4;
+    color: #fff;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.form span {
+    font-size: 0.9em;
+}
+
+.form p {
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.form a {
+    text-decoration: none;
+}
+
+.right {
+    text-align: right;
+    display: block;
+    margin: 5px 0;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký</title>
+    <link rel="stylesheet" href="./config/layout.css">
+</head>
+<body>
+    <div class="container">
+        <div class="index-layout">
+            <img src="./img/computer.svg" alt="">
+
+            <form class="form">
+                <h2>Đăng Ký Tài Khoản</h2>
+
+                <div>
+                    <label for="username">Họ và tên</label>
+                    <input type="text" id="username">
+                </div>
+
+                <div class="list-radio">
+                    <label for="gender">Giới tính</label>
+                    <div>
+                        <input checked name="gender" value="0" type="radio"> Nam
+                        <input name="gender" value="1" type="radio"> Nữ
+                        <input name="gender" value="2" type="radio"> Khác
+                    </div>
+                </div>
+
+                <div>
+                    <label for="date-of-birth">Ngày sinh</label>
+                    <input type="date" id="date-of-birth">
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input type="text" id="email">
+                </div>
+
+                <div>
+                    <label for="password">Mật khẩu</label>
+                    <input type="password" id="password">
+                </div>
+
+                <div>
+                    <label for="repassword">Nhập lại mật khẩu</label>
+                    <input type="password" id="repassword">
+                </div>
+
+                <div class="checkbox">
+                    <input id="policy" type="checkbox">
+                    <span>Bạn đồng ý với điều khoản và chính sách</span>
+                </div>
+
+                <button id="signUp" type="submit">Đăng Ký</button>
+
+                <p>Bạn đã có tài khoản? <a href="/login.html">Đăng nhập</a></p>
+            </form>
+
+        </div>
+    </div>
+    <script src="./config/module.js"></script>
+    <script src="./config/signup.js"></script>
+</body>
+</html>
