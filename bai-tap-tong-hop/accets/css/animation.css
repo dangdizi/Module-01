@@ -1,0 +1,90 @@
+.navbar-close {
+    animation: navbarClose ease-in-out .3s forwards;
+    display: block;
+    overflow: hidden;
+}
+
+.navbar-open {
+    animation: navbarOpen ease-in-out .3s forwards;
+    display: block;
+}
+
+.tooltips-open {
+    animation: tooltipsOpen ease-in-out .3s forwards;
+}
+
+.tooltips-close {
+    animation: tooltipsClose ease-in-out .3s forwards;
+}
+
+.modal-open {
+    animation: modalOpen ease-in-out .3s forwards;
+}
+
+.modal-close {
+    animation: modalClose ease-in-out .3s forwards;
+}
+
+@keyframes modalOpen {
+    0% {
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+@keyframes tooltipsClose {
+    from {
+        margin-top: 0;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    to {
+        margin-top: 20px;
+        opacity: `0;
+        visibility: hidden;
+    }
+}
+
+@keyframes tooltipsOpen {
+    from {
+        margin-top: 20px;
+        visibility: hidden;
+        opacity: 1;
+    }
+
+    to {
+        margin-top: 0px;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes navbarClose {
+    from {
+        margin-left: 0;
+    }
+
+    to {
+        margin-left: -251px;
+    }
+}
+
+
+@keyframes navbarOpen {
+    from {
+        margin-left: -251px;
+    }
+
+    to {
+        margin-left: 0;
+    }
+}

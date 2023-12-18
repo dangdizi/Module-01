@@ -1,0 +1,10 @@
+@import url('./index.css');
+@import url('./signup.css');
+@import url('./animation.css');
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
